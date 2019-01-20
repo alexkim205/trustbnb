@@ -26,6 +26,8 @@
           <entry key="jpg" value="3" />
           <entry key="js" value="56" />
           <entry key="json" value="7" />
+          <entry key="lock" value="1" />
+          <entry key="md" value="1" />
           <entry key="prettierrc" value="5" />
           <entry key="rnc" value="1" />
           <entry key="scss" value="6" />
@@ -37,9 +39,10 @@
           <entry key="Image" value="3" />
           <entry key="JSON" value="12" />
           <entry key="JavaScript" value="56" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="PLAIN_TEXT" value="2" />
           <entry key="RNG Compact" value="1" />
           <entry key="SCSS" value="6" />
+          <entry key="yarn.lock" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -47,6 +50,7 @@
           <entry key="css" value="36" />
           <entry key="js" value="11507" />
           <entry key="json" value="315" />
+          <entry key="md" value="19" />
           <entry key="scss" value="421" />
         </counts>
       </usages-collector>
@@ -55,6 +59,7 @@
           <entry key="CSS" value="36" />
           <entry key="JSON" value="315" />
           <entry key="JavaScript" value="11507" />
+          <entry key="PLAIN_TEXT" value="19" />
           <entry key="SCSS" value="421" />
         </counts>
       </usages-collector>
@@ -96,10 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../bvrealestatepartners/.gitignore">
+        <entry file="file://$PROJECT_DIR$/../bvrealestatepartners/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+            <state>
+              <caret column="33" selection-start-column="33" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -198,6 +203,7 @@
         <option value="$PROJECT_DIR$/../bvrealestatepartners/src/pages/index.js" />
         <option value="$PROJECT_DIR$/../bvrealestatepartners/src/components/list.js" />
         <option value="$PROJECT_DIR$/../bvrealestatepartners/.gitignore" />
+        <option value="$PROJECT_DIR$/../bvrealestatepartners/README.md" />
       </list>
     </option>
   </component>
@@ -218,8 +224,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="717" />
-    <option name="y" value="22" />
+    <option name="x" value="105" />
+    <option name="y" value="33" />
     <option name="width" value="1203" />
     <option name="height" value="1110" />
   </component>
@@ -285,15 +291,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547923502486</updated>
-      <workItem from="1547923504110" duration="38345000" />
+      <workItem from="1547923504110" duration="38525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38345000" />
+    <option name="totallyTimeSpent" value="38525000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="717" y="22" width="1203" height="1110" extended-state="0" />
+    <frame x="105" y="33" width="1203" height="1110" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
@@ -542,6 +548,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../bvrealestatepartners/yarn.lock">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../bvrealestatepartners/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../bvrealestatepartners/src/components/list.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -552,10 +568,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../bvrealestatepartners/.gitignore">
+    <entry file="file://$PROJECT_DIR$/../bvrealestatepartners/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="57" column="7" selection-start-line="57" selection-start-column="7" selection-end-line="57" selection-end-column="7" />
+        <state>
+          <caret column="33" selection-start-column="33" selection-end-column="33" />
         </state>
       </provider>
     </entry>
