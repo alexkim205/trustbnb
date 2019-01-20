@@ -95,6 +95,7 @@ const ContactInfo = styled.div`
   }
   
   @media (max-width: 768px) {
+    margin: 0;
     margin-top: 40px;
     // border-top: 1px solid ${colors.border.light};
     max-width: 100%;
