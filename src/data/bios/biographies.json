@@ -1,0 +1,18 @@
+{
+  "team": [
+    {
+      "fname": "Elizabeth",
+      "mname": "Tin",
+      "lname": "Chang",
+      "position": "Founder, Managing Partner",
+      "biography": "Cras venenatis est et purus condimentum gravida. Vestibulum elementum turpis sed quam suscipit, vel commodo erat pulvinar. Ut et congue felis. Aliquam auctor augue non nulla facilisis tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam sit amet accumsan tortor. Nulla leo enim, sagittis vitae nunc at, convallis venenatis nisi. Integer ac urna neque. Proin ac metus sed ante suscipit faucibus sit amet eu magna. Quisque eu mauris consequat, sollicitudin."
+    },
+    {
+      "fname": "Michael",
+      "mname": "",
+      "lname": "Chang",
+      "position": "Founder, Managing Partner",
+      "biography": "Phasellus faucibus velit at egestas auctor. Curabitur nec auctor purus. Donec eget dignissim purus, vel porttitor tortor. Nullam fringilla nisl in est rhoncus rutrum. Duis quis pulvinar ipsum. Nam ultrices varius leo, sit amet rhoncus ante egestas vitae. Nunc blandit turpis vitae ornare iaculis. Etiam elementum eros non dui commodo sagittis. Nunc gravida faucibus iaculis. Sed eget lorem in metus egestas porta. Sed sit amet tortor sit amet urna ultricies dignissim. Phasellus viverra sodales vulputate."
+    }
+  ]
+}

@@ -36,7 +36,7 @@ const StyledNavbar = styled(Navbar)`
     font-weight: 500; // medium
   }
   .nav-item {
-    margin: 0 10px;
+    margin: auto 10px;
   }
   .navbar-brand {
     font-size: 16px !important;
@@ -48,26 +48,38 @@ const StyledNavbar = styled(Navbar)`
       fill: ${colors.font.dark};
     }
   }
-  @media (max-width: 767px) {
-    padding: 0 12px !important;
+  @media (max-width: 768px) {
+    padding: 0 18px !important;
+  }
+`;
+
+const StyledNav = styled(Nav)`
+  @media (max-width: 768px) {
+    .nav-item {
+      margin: 0 30px;
+      // padding: 5px 5px;
+      border-bottom: 1px solid ${colors.border.light};
+    }
   }
 `;
 
 const ActionButton = styled(NavItem)`
-  border: 1px solid ${colors.border.light};
-  // background-color: ${colors.theme.main};
-  border-radius: 1px;
+  background-color: ${colors.theme.main};
+  border-radius: 3px;
   transition: all 0.2s;
+  padding: 2px 5px;
+  border-radius: 2px;
+  
   a {
+    color: white !important;
     transition: color 0.2s;
   }
   
   &:hover {
-    border-color: ${colors.border.dark}
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-    a {
-      color: black !important;
-    }
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -98,7 +110,7 @@ class Header extends Component {
               <FontAwesomeIcon icon={faAngleDown}/>
             </NavbarToggler>
             <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+              <StyledNav className="ml-auto" navbar>
                 <NavItem>
                   <NavLink href="/contact/">Contact Us</NavLink>
                 </NavItem>
@@ -106,9 +118,9 @@ class Header extends Component {
                   <NavLink href="/faq">FAQ</NavLink>
                 </NavItem>
                 <ActionButton>
-                  <NavLink href="/inquiry">Send us an inquiry</NavLink>
+                  <NavLink href="/inquiry">Work With Us</NavLink>
                 </ActionButton>
-              </Nav>
+              </StyledNav>
             </Collapse>
           </StyledNavbar>
 

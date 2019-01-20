@@ -1,11 +1,15 @@
-import React, {Component, Fragment} from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types";
+import React, {Component, Fragment} from 'react';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 class GridSection extends Component {
   render() {
-    <Fragment>
+    return (
+        <Fragment>
 
-    </Fragment>
+        </Fragment>
+    );
   }
 }
+
+export default GridSection;

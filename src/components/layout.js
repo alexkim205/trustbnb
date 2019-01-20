@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {StaticQuery, graphql} from 'gatsby';
 
-import {Container} from 'reactstrap';
-
 import Header from './header';
 import Footer from './footer';
 import '../styles/fonts.scss';
@@ -14,6 +12,8 @@ const Body = styled.div`
   padding: 0 24px;
   max-width: 1540px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
   
   @media (max-width: 767px) {
     padding: 0 12px;

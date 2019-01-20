@@ -43,12 +43,13 @@
 * {
   font-family: 'Cereal', sans-serif;
   line-height: 22px;
+  color: #484848;
 }
 
 body {
   font-size: 16px;
   font-weight: 400;
-  color: #484848;
+  color: #484848 !important;
 }
 
 p {
@@ -57,7 +58,7 @@ p {
 
 h1 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 700 !important;
   margin: 6px 0;
 }
 
