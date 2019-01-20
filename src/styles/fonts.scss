@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Cereal';
+  src: url('../fonts/AirbnbCereal-Light.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('../fonts/AirbnbCereal-Book.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('../fonts/AirbnbCereal-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('../fonts/AirbnbCereal-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('../fonts/AirbnbCereal-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src: url('../fonts/AirbnbCereal-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Cereal', sans-serif;
+  line-height: 22px;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  color: #484848;
+}
+
+p {
+  color: #767676;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 6px 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
