@@ -47,13 +47,16 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: #484848 !important;
 }
 
 p {
   color: #767676;
+  font-size: 16px;
+  line-height: 1.55em;
+  margin-top: 1rem;
 }
 
 h1 {
@@ -65,4 +68,16 @@ h1 {
 h2 {
   font-size: 24px;
   font-weight: 700;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 400 !important;
+  color: #767676 !important;
+}
+
+span {
+  &.highlight {
+    font-weight: 700;
+  }
 }

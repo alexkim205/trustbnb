@@ -10,8 +10,8 @@ const BiosWrapper = styled.div`
   flex-direction: column;
   // background-color: pink;
   @media (max-width: 768px) {
-    padding-left: 6px;
-    padding-right: 6px;
+    margin-left: 12px;
+    margin-right: 12px;
   }
 `;
 
@@ -75,7 +75,7 @@ const Content = styled.div`
   }
   p {
       font-size: 15px;
-      line-height: 1.6em;
+      line-height: 1.55em;
     }
   
   @media (max-width: 768px) {
