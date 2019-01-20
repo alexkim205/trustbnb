@@ -22,6 +22,10 @@ const BioWrapper = styled.div`
   background-color: white;
   @media (max-width: 768px) {
     flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @media (max-width: 425px) {
+    flex-direction: column;
   }
 `;
 
@@ -37,7 +41,7 @@ const Picture = styled.div`
     padding: 0 !important;
   }
   @media (max-width: 768px) {
-    width: 100%;
+    width: 50%;
     margin: 0 0 20px 0;
     max-width: 220px;
     max-height: 280px;
@@ -46,7 +50,10 @@ const Picture = styled.div`
       height: 280px !important;
     }
   }
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
+    min-width: 220px;
+    width: 70%;
+    margin: 0 auto 20px auto;
     max-width: 100%;
     max-height: 100%;
     .gatsby-image-wrapper {
@@ -70,8 +77,12 @@ const Content = styled.div`
   text-align: ${props => props.reverseOrder ? 'left' : 'right'};
   display: flex;
   flex-direction: column;
+  h3 {
+    margin: 0;
+  }
   small {
     font-style: italic;
+    margin-bottom: 5px;
   }
   p {
       font-size: 15px;
@@ -79,11 +90,16 @@ const Content = styled.div`
     }
   
   @media (max-width: 768px) {
-    // text-align: left;
-    padding: 0;
+    flex: 1;
+    text-align: left;
+    padding: 0 20px;
     p {
       line-height: 1.4em;
     }
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+    h3, small { text-align: center;}
   }
 `;
 

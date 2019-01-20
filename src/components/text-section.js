@@ -15,7 +15,7 @@ const TextWrapper = styled.div`
 `;
 
 const Head = styled.div`
-  padding: 20px 24px 10px 24px;
+  padding: 24px 24px 0px 24px;
   // background-color: ${props => props.color};
   // background-color: white;
   h2 {
