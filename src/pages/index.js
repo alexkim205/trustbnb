@@ -16,7 +16,13 @@ import Bio from '../components/bio';
 import {SpacedHr, HalfSpacedHr} from '../components/spaced-hr';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faPencilAlt, faQuoteLeft, faHome, faSignature, faMoneyCheckAlt} from '@fortawesome/free-solid-svg-icons';
+import {
+  faPencilAlt,
+  faQuoteLeft,
+  faHome,
+  faSignature,
+  faMoneyCheckAlt,
+} from '@fortawesome/free-solid-svg-icons';
 
 import colors from '../styles/colors';
 
@@ -26,12 +32,15 @@ class IndexPage extends Component {
 
     // images
     const {
-      elizabeth, michael, apartment, kitchen,
+      elizabeth, michael, franc, apartment, kitchen,
       nyc1, nyc2, table, work,
     } = this.props.data;
+    console.log(this.props.data)
     const teamImgs = [
       elizabeth.childImageSharp.fluid,
-      michael.childImageSharp.fluid];
+      michael.childImageSharp.fluid,
+      franc.childImageSharp.fluid,
+    ];
     // bios
     const {bios} = this.props.data;
     const team = bios.edges[0].node.team;
@@ -95,26 +104,31 @@ class IndexPage extends Component {
           <TextSection color={colors.theme.accent}
                        header="How it works?">
             <CircleGrid>
-              <CircleGridSection icon={<FontAwesomeIcon icon={faPencilAlt} size="2x"/>}
-                                 underTitle="Submit Form"
-                                 underText="Start by submitting the landlord inquiry form"
-                                 color={colors.theme.accent}/>
-              <CircleGridSection icon={<FontAwesomeIcon icon={faQuoteLeft} size="2x"/>}
-                                 underTitle="Free Quote"
-                                 underText="Our team will get in touch with you within 24 Hours"
-                                 color={colors.theme.accent}/>
-              <CircleGridSection icon={<FontAwesomeIcon icon={faHome} size="2x"/>}
-                                 underTitle="Property Tour"
-                                 underText="Schedule property tour and discuss lease terms"
-                                 color={colors.theme.accent}/>
-              <CircleGridSection icon={<FontAwesomeIcon icon={faSignature} size="2x"/>}
-                                 underTitle="Sign Lease"
-                                 underText="Sign lease agreement and we will take care of the rest!"
-                                 color={colors.theme.accent}/>
-              <CircleGridSection icon={<FontAwesomeIcon icon={faMoneyCheckAlt} size="2x"/>}
-                                 underTitle="Collect Rent"
-                                 underText="Sit back and receive ongoing rent check!"
-                                 color={colors.theme.accent}/>
+              <CircleGridSection
+                  icon={<FontAwesomeIcon icon={faPencilAlt} size="2x"/>}
+                  underTitle="Submit Form"
+                  underText="Start by submitting the landlord inquiry form"
+                  color={colors.theme.accent}/>
+              <CircleGridSection
+                  icon={<FontAwesomeIcon icon={faQuoteLeft} size="2x"/>}
+                  underTitle="Free Quote"
+                  underText="Our team will get in touch with you within 24 Hours"
+                  color={colors.theme.accent}/>
+              <CircleGridSection
+                  icon={<FontAwesomeIcon icon={faHome} size="2x"/>}
+                  underTitle="Property Tour"
+                  underText="Schedule property tour and discuss lease terms"
+                  color={colors.theme.accent}/>
+              <CircleGridSection
+                  icon={<FontAwesomeIcon icon={faSignature} size="2x"/>}
+                  underTitle="Sign Lease"
+                  underText="Sign lease agreement and we will take care of the rest!"
+                  color={colors.theme.accent}/>
+              <CircleGridSection
+                  icon={<FontAwesomeIcon icon={faMoneyCheckAlt} size="2x"/>}
+                  underTitle="Collect Rent"
+                  underText="Sit back and receive ongoing rent check!"
+                  color={colors.theme.accent}/>
             </CircleGrid>
           </TextSection>
           <SpacedHr/>
@@ -136,6 +150,9 @@ query pageQuery {
     ...fluidSmallImage
   }
   michael: file(relativePath: {eq: "portraits/michael.jpg"}) {
+    ...fluidSmallImage
+  }
+  franc: file(relativePath: {eq: "portraits/francisco.jpg"}) {
     ...fluidSmallImage
   }
   apartment: file(relativePath: {eq: "homes/apartment.jpg"}) {

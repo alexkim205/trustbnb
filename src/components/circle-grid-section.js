@@ -40,7 +40,10 @@ const StyledIcon = styled.div`
   width: 90px;
   height: 90px;
   display: flex;
+  justify-content: center;
   margin: 0 auto;
+  align-items: center;
+
   path {
     fill: ${props => props.color};
   }
