@@ -12,17 +12,7 @@ import CircleGrid from '../components/circle-grid'
 import CircleGridSection from '../components/circle-grid-section'
 import UList from '../components/list'
 import SEO from '../components/seo'
-import Bio from '../components/bio'
 import { SpacedHr, HalfSpacedHr } from '../components/spaced-hr'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faPhoneSquare,
-  faEnvelopeSquare,
-} from '@fortawesome/free-solid-svg-icons'
-import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
-
-import colors from '../styles/colors'
 
 class Listings extends Component {
 
