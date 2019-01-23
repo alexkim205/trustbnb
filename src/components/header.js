@@ -173,6 +173,9 @@ class Header extends Component {
             </StyledNavbarToggler>
             <Dropdown isOpen={this.state.isOpen}>
               <DDNavItem>
+                <Link to="/listings/">Our Listings</Link>
+              </DDNavItem>
+              <DDNavItem>
                 <Link to="/contact/">Contact Us</Link>
               </DDNavItem>
               <DDNavItem>
@@ -186,6 +189,9 @@ class Header extends Component {
               </DDNavItem>
             </Dropdown>
             <StyledNav navbar>
+              <NavItem>
+                <Link to="/listings/">Our Listings</Link>
+              </NavItem>
               <NavItem>
                 <Link to="/contact/">Contact Us</Link>
               </NavItem>

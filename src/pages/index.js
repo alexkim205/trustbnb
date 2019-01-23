@@ -33,9 +33,8 @@ class IndexPage extends Component {
     // images
     const {
       elizabeth, michael, franc, apartment, kitchen,
-      nyc1, nyc2, table, work,
+      rent1, rent2, rent3, rent4, rent5,
     } = this.props.data;
-    console.log(this.props.data)
     const teamImgs = [
       elizabeth.childImageSharp.fluid,
       michael.childImageSharp.fluid,
@@ -82,19 +81,19 @@ class IndexPage extends Component {
           <h2>Why rent to us?</h2>
           {/*<FullWidthSection fluidImage={work.childImageSharp.fluid}/>*/}
           <Grid>
-            <GridSection fluidImage={nyc1.childImageSharp.fluid}
+            <GridSection fluidImage={rent1.childImageSharp.fluid}
                          underTitle="Guaranteed Rental Income"
                          underText="We are a Landlord’s ideal tenant. Landlords secure the guaranteed income of a traditional lease with our corporate automatic payment system. No more late rent or worries on your mortgage payment."/>
-            <GridSection fluidImage={table.childImageSharp.fluid}
+            <GridSection fluidImage={rent3.childImageSharp.fluid}
                          underTitle="Professional Staff"
                          underText=" Our property managers and cleaning staff report any maintenance requirements immediately using our management app, making sure that any issues are addressed professionally and timely. Less wear and tear for your property."/>
-            <GridSection fluidImage={nyc2.childImageSharp.fluid}
+            <GridSection fluidImage={rent2.childImageSharp.fluid}
                          underTitle="Highly Experienced Team"
                          underText="Over 20 years of experience in hospitality, finance, and technology."/>
-            <GridSection fluidImage={table.childImageSharp.fluid}
+            <GridSection fluidImage={rent4.childImageSharp.fluid}
                          underTitle="Legally Compliant"
                          underText="We comply with all local laws regarding property rental and zoning, and we pay all applicable taxes."/>
-            <GridSection fluidImage={table.childImageSharp.fluid}
+            <GridSection fluidImage={rent5.childImageSharp.fluid}
                          underTitle="Verified Guests"
                          underText="We screen each guest using machine learning technology and continually improve our fraud prevention program by partnering with leaders in the field."/>
 
@@ -161,16 +160,19 @@ query pageQuery {
   kitchen: file(relativePath: {eq: "homes/kitchen.jpg"}) {
     ...fluidLargeImage
   }
-  nyc1: file(relativePath: {eq: "misc/nyc1.jpg"}) {
+  rent1: file(relativePath: {eq: "whyrent/rental-income.jpg"}) {
     ...fluidLargeImage
   }
-  nyc2: file(relativePath: {eq: "misc/nyc2.jpg"}) {
+  rent2: file(relativePath: {eq: "whyrent/professional_staff.jpg"}) {
     ...fluidLargeImage
   }
-  table: file(relativePath: {eq: "misc/table.jpg"}) {
+  rent3: file(relativePath: {eq: "whyrent/staff.jpg"}) {
     ...fluidLargeImage
   }
-  work: file(relativePath: {eq: "misc/work.jpg"}) {
+  rent4: file(relativePath: {eq: "whyrent/legal-compliance.jpg"}) {
+    ...fluidLargeImage
+  }
+  rent5: file(relativePath: {eq: "whyrent/verification.jpg"}) {
     ...fluidLargeImage
   }
   bios: allJson {
@@ -182,6 +184,7 @@ query pageQuery {
           lname
           position
           biography
+          linkedin
         }
       }
     }

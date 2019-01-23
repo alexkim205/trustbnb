@@ -54,7 +54,7 @@ class GridSection extends Component {
 
   render() {
     const {fluidImage, underTitle, underText} = this.props;
-    console.log(fluidImage);
+    // console.log(fluidImage);
     return (
         <GridItem>
           <StyledImg fluid={fluidImage}/>
