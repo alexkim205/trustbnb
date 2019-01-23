@@ -2,16 +2,21 @@ import React, {Component, Fragment} from 'react';
 import styled from 'styled-components';
 import {graphql} from 'gatsby';
 
-import Section from '../components/section';
+import {Section} from '../components/section';
 import Layout from '../components/layout';
 import FullWidthSection from '../components/full-width-section';
 import TextSection from '../components/text-section';
 import Grid from '../components/grid';
 import GridSection from '../components/grid-section';
+import CircleGrid from '../components/circle-grid';
+import CircleGridSection from '../components/circle-grid-section';
 import UList from '../components/list';
 import SEO from '../components/seo';
 import Bio from '../components/bio';
 import {SpacedHr, HalfSpacedHr} from '../components/spaced-hr';
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faPencilAlt, faQuoteLeft, faHome, faSignature, faMoneyCheckAlt} from '@fortawesome/free-solid-svg-icons';
 
 import colors from '../styles/colors';
 
@@ -36,7 +41,7 @@ class IndexPage extends Component {
           <SEO title="Home" keywords={[`real estate`, `housing`, `bv`]}/>
           {/* Title */}
           <Section>
-            <h1>BV Real Estate Partners</h1>
+            <h1>BV Rental Network</h1>
             <h6>Mission statement goes here. It should be about as long as these
               two sentences.</h6>
           </Section>
@@ -46,59 +51,71 @@ class IndexPage extends Component {
           {/* About Us */}
           <TextSection color={colors.theme.main} header="Mission Statement">
             <p>
-              <span className="highlight">BV Real Estate Partners </span>
-              was born in New York as a technology driven short-term
-              corporate rental company. Our mission is to cultivate a
-              quality stay for our professional guests through providing a
-              unique home experience.
+              <span className="highlight">BV Rental Network
+              is committed to helping owners maximize returns on their real
+              estate, with the lowest risk:</span>
+
             </p>
             <p>
-              Interdum et malesuada fames ac ante ipsum primis in faucibus.
-              Morbi fringilla varius convallis. Etiam tincidunt tincidunt metus
-              nec sollicitudin. Phasellus ac enim cursus tortor efficitur
-              mollis. Quisque metus enim, mollis et malesuada quis, posuere a
-              lectus. Curabitur aliquet quis magna sed aliquam. Quisque vel orci
-              est. Proin imperdiet interdum dui, nec porttitor lectus mollis a.
-              Cras lacinia nisi vitae justo varius pretium quis sit amet ex.
-              Cras nec leo massa.
+              The properties we lease in New Jersey are guaranteed by the
+              highest credit rating and corporate reserved fund. We will take
+              care of your property according to the highest standards and the
+              travelers we host are carefully screened.
             </p>
             <p>
-              Proin finibus lacus id est varius finibus. Nullam in mattis ex.
-              Curabitur erat libero, hendrerit et pulvinar iaculis, mattis sed
-              leo. Vestibulum porta dui in lacus vehicula, quis sagittis turpis
-              bibendum. Mauris tempor ultrices posuere. Aenean rutrum convallis
-              erat, eget consectetur dui ultrices et. Maecenas at pellentesque
-              purus, in hendrerit lacus. Aliquam blandit lectus vitae volutpat
-              congue. Suspendisse ullamcorper vel ante a pulvinar.
+              After each stay, our team of professionals thoroughly cleans and
+              performs any required maintenance on the property. Think of us as
+              your ideal tenant, because that’s exactly who we are!
             </p>
           </TextSection>
           <SpacedHr/>
-          {/* How Do We Work? */}
-          <h2>How do we work?</h2>
-          <FullWidthSection fluidImage={work.childImageSharp.fluid}/>
+          {/* Why rent? */}
+          <h2>Why rent to us?</h2>
+          {/*<FullWidthSection fluidImage={work.childImageSharp.fluid}/>*/}
           <Grid>
             <GridSection fluidImage={nyc1.childImageSharp.fluid}
-                         underTitle="Value 1"
-                         underText="Maecenas at pellentesque purus, in hendrerit lacus. Aliquam blandit lectus vitae volutpat congue. Suspendisse ullamcorper vel ante a pulvinar."/>
-            <GridSection fluidImage={nyc2.childImageSharp.fluid}
-                         underTitle="Value 2"
-                         underText="Donec sit amet lorem ac risus sollicitudin viverra sit amet faucibus sem. Nullam finibus tincidunt odio, at lobortis neque tincidunt vel."/>
+                         underTitle="Guaranteed Rental Income"
+                         underText="We are a Landlord’s ideal tenant. Landlords secure the guaranteed income of a traditional lease with our corporate automatic payment system. No more late rent or worries on your mortgage payment."/>
             <GridSection fluidImage={table.childImageSharp.fluid}
-                         underTitle="Value 3"
-                         underText="Nulla gravida eu erat vitae tincidunt. Pellentesque sollicitudin orci a justo interdum, posuere imperdiet libero suscipit."/>
+                         underTitle="Professional Staff"
+                         underText=" Our property managers and cleaning staff report any maintenance requirements immediately using our management app, making sure that any issues are addressed professionally and timely. Less wear and tear for your property."/>
+            <GridSection fluidImage={nyc2.childImageSharp.fluid}
+                         underTitle="Highly Experienced Team"
+                         underText="Over 20 years of experience in hospitality, finance, and technology."/>
+            <GridSection fluidImage={table.childImageSharp.fluid}
+                         underTitle="Legally Compliant"
+                         underText="We comply with all local laws regarding property rental and zoning, and we pay all applicable taxes."/>
+            <GridSection fluidImage={table.childImageSharp.fluid}
+                         underTitle="Verified Guests"
+                         underText="We screen each guest using machine learning technology and continually improve our fraud prevention program by partnering with leaders in the field."/>
+
           </Grid>
           <SpacedHr/>
-          {/* Why should you rent your home to us? */}
-          <TextSection color={colors.theme.darkaccent}
-                       header="Why should you rent your home to us?">
-            <UList lis={[
-              'Guaranteed long-term rental income',
-              'Experienced management team',
-              'Professional maintenance staff',
-              'Fully insured for damage and liability',
-              'Regular deep-cleaning services',
-
-            ]}/>
+          {/* How it works? */}
+          <TextSection color={colors.theme.accent}
+                       header="How it works?">
+            <CircleGrid>
+              <CircleGridSection icon={<FontAwesomeIcon icon={faPencilAlt} size="2x"/>}
+                                 underTitle="Submit Form"
+                                 underText="Start by submitting the landlord inquiry form"
+                                 color={colors.theme.accent}/>
+              <CircleGridSection icon={<FontAwesomeIcon icon={faQuoteLeft} size="2x"/>}
+                                 underTitle="Free Quote"
+                                 underText="Our team will get in touch with you within 24 Hours"
+                                 color={colors.theme.accent}/>
+              <CircleGridSection icon={<FontAwesomeIcon icon={faHome} size="2x"/>}
+                                 underTitle="Property Tour"
+                                 underText="Schedule property tour and discuss lease terms"
+                                 color={colors.theme.accent}/>
+              <CircleGridSection icon={<FontAwesomeIcon icon={faSignature} size="2x"/>}
+                                 underTitle="Sign Lease"
+                                 underText="Sign lease agreement and we will take care of the rest!"
+                                 color={colors.theme.accent}/>
+              <CircleGridSection icon={<FontAwesomeIcon icon={faMoneyCheckAlt} size="2x"/>}
+                                 underTitle="Collect Rent"
+                                 underText="Sit back and receive ongoing rent check!"
+                                 color={colors.theme.accent}/>
+            </CircleGrid>
           </TextSection>
           <SpacedHr/>
           <SpacedHr/>

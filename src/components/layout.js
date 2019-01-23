@@ -12,6 +12,7 @@ const Body = styled.div`
   padding: 0 24px;
   max-width: 1540px;
   margin: auto;
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
   

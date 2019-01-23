@@ -19,7 +19,7 @@ const StyledGrid = styled.div`
   }
 `;
 
-const Grid = (props) => {
+const CircleGrid = (props) => {
   const numChild = props.children.length;
 
   return (
@@ -29,4 +29,4 @@ const Grid = (props) => {
   );
 };
 
-export default Grid;
+export default CircleGrid;

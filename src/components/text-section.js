@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Section from './section';
+import {FullSection} from './section';
 import {SpacedHr, HalfSpacedHr} from './spaced-hr';
 
 import colors from '../styles/colors';
@@ -35,7 +35,7 @@ class TextSection extends Component {
     const {header, children, color} = this.props;
 
     return (
-        <Section color={color}>
+        <FullSection color={color}>
           <Head color={color}>
             <h2>{header}</h2>
           </Head>
@@ -43,7 +43,7 @@ class TextSection extends Component {
             <HalfSpacedHr/>
             {children}
           </TextWrapper>
-        </Section>
+        </FullSection>
     );
   }
 }

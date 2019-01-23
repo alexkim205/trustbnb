@@ -4,15 +4,19 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Section from './section';
+import {Section} from './section';
 import colors from '../styles/colors';
 
 const GridItem = styled.div`
+  text-align: center;
+  margin-bottom: 18px;
+  .grid-title {
+    font-weight: 700;
+  }
   p {
-    .grid-title {
-      font-weight: 700;
-    }
     font-size: 15px;
+    text-align: justify;
+    margin: 10px;
   }
   width: 32.5%;
   @media (max-width: 768px) {
@@ -55,8 +59,9 @@ class GridSection extends Component {
         <GridItem>
           <StyledImg fluid={fluidImage}/>
           <Body>
+          <span className="grid-title">{underTitle}</span>
           <p>
-            <span className="grid-title">{underTitle}</span>.{'   '}{underText}
+            {underText}
           </p>
           </Body>
         </GridItem>

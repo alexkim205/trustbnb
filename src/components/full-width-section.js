@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Section from './section';
+import {Section} from './section';
 
 const StyledImg = styled(Img)`
   overflow: hidden;
