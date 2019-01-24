@@ -15,7 +15,7 @@ import {
 const StyledNavbar = styled.div`
   margin: 0px auto;
   width: 100%;
-  padding: 18px 24px 18px 24px;
+  padding: 12px 24px 12px 24px;
   position: fixed;
   display: flex;
   top: 0;
@@ -175,14 +175,14 @@ class Header extends Component {
               <DDNavItem>
                 <Link to="/listings/">Our Listings</Link>
               </DDNavItem>
-              <DDNavItem>
-                <Link to="/contact/">Contact Us</Link>
-              </DDNavItem>
+              {/*<DDNavItem>*/}
+                {/*<Link to="/contact/">Contact Us</Link>*/}
+              {/*</DDNavItem>*/}
               <DDNavItem>
                 <Link to="/faq/">FAQ</Link>
               </DDNavItem>
               <DDNavItem>
-                <Link to="/inquiry/">Work With Us</Link>
+                <Link to="/contact/">Work With Us</Link>
               </DDNavItem>
               <DDNavItem>
                 <Link to="/inquiry/">Refer & Earn</Link>
@@ -192,14 +192,14 @@ class Header extends Component {
               <NavItem>
                 <Link to="/listings/">Our Listings</Link>
               </NavItem>
-              <NavItem>
-                <Link to="/contact/">Contact Us</Link>
-              </NavItem>
+              {/*<NavItem>*/}
+                {/*<Link to="/contact/">Contact Us</Link>*/}
+              {/*</NavItem>*/}
               <NavItem>
                 <Link to="/faq">FAQ</Link>
               </NavItem>
               <ActionButton>
-                <Link to="/inquiry">Work With Us</Link>
+                <Link to="/contact">Work With Us</Link>
               </ActionButton>
               <ActionButtonOutline>
                 <Link to="/inquiry">Refer & Earn</Link>
