@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import colors from '../styles/colors';
 
 const StyledFooter = styled.div`
-  margin: 55px auto;
+  margin: 180px auto 50px auto;
   padding: 55px 24px !important;
   border-top: 1px solid ${colors.border.light};
   max-width: 1540px;

@@ -40,7 +40,7 @@ const BioWrapper = styled.div`
   }
   
   .name {
-    margin: 20px 0;
+    margin: 18px 0;
     text-align: center;
   }
   

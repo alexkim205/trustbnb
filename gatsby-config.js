@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `BV Real Estate Partners`,
-    officialTitle: `BV Real Estate Partners, Inc.`,
+    title: `TrustedBnB`,
+    officialTitle: `TrustedBnB, Inc.`,
     description: `A website to showcase BV Real Estate Partners`,
     author: `Alex Kim <agk2144@columbia.edu>`,
   },

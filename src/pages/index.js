@@ -32,9 +32,11 @@ class IndexPage extends Component {
 
     // images
     const {
+      siteData,
       elizabeth, michael, franc, apartment, kitchen,
       rent1, rent2, rent3, rent4, rent5,
     } = this.props.data;
+    console.log(this.props.data.siteData)
     const teamImgs = [
       elizabeth.childImageSharp.fluid,
       michael.childImageSharp.fluid,
@@ -49,7 +51,7 @@ class IndexPage extends Component {
           <SEO title="Home" keywords={[`real estate`, `housing`, `bv`]}/>
           {/* Title */}
           <Section>
-            <h1>BV Rental Network</h1>
+            <h1>{siteData.siteMetadata.title}</h1>
             <h6>Mission statement goes here. It should be about as long as these
               two sentences.</h6>
           </Section>
@@ -59,7 +61,7 @@ class IndexPage extends Component {
           {/* About Us */}
           <TextSection color={colors.theme.main} header="Mission Statement">
             <p>
-              <span className="highlight">BV Rental Network
+              <span className="highlight">{siteData.siteMetadata.title}
               is committed to helping owners maximize returns on their real
               estate, with the lowest risk:</span>
 
@@ -145,6 +147,12 @@ export default IndexPage;
 
 export const pageQuery = graphql`
 query pageQuery {
+  siteData: site {
+    siteMetadata {
+      title
+      officialTitle
+    }
+  }
   elizabeth: file(relativePath: {eq: "portraits/elizabeth.jpg"}) {
     ...fluidSmallImage
   }
@@ -163,7 +171,7 @@ query pageQuery {
   rent1: file(relativePath: {eq: "whyrent/rental-income.jpg"}) {
     ...fluidLargeImage
   }
-  rent2: file(relativePath: {eq: "whyrent/professional_staff.jpg"}) {
+  rent2: file(relativePath: {eq: "whyrent/professional-staff.jpg"}) {
     ...fluidLargeImage
   }
   rent3: file(relativePath: {eq: "whyrent/staff.jpg"}) {

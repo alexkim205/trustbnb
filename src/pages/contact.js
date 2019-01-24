@@ -122,8 +122,8 @@ class Contact extends Component {
       phone: '',
       message: '',
       address: '',
-      numBed: 0,
-      numBath: 0,
+      numBed: '',
+      numBath: '',
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
