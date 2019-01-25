@@ -6,6 +6,7 @@ import {Section} from '../components/section';
 import Layout from '../components/layout';
 import FullWidthSection from '../components/full-width-section';
 import TextSection from '../components/text-section';
+import TextSection2 from '../components/text-section-2';
 import Grid from '../components/grid';
 import GridSection from '../components/grid-section';
 import CircleGrid from '../components/circle-grid';
@@ -59,11 +60,11 @@ class IndexPage extends Component {
           {/* Header Image */}
           <FullWidthSection fluidImage={kitchen.childImageSharp.fluid}/>
           {/* About Us */}
-          <TextSection color={colors.theme.main} header="Mission Statement">
+          <TextSection2 color={colors.theme.secondary} header="Mission Statement">
             <p>
-              <span className="highlight">{siteData.siteMetadata.title}
+              <span className="highlight">{siteData.siteMetadata.title}&nbsp;
               is committed to helping owners maximize returns on their real
-              estate, with the lowest risk:</span>
+              estate, with the lowest risk.</span>
 
             </p>
             <p>
@@ -77,7 +78,7 @@ class IndexPage extends Component {
               performs any required maintenance on the property. Think of us as
               your ideal tenant, because that’s exactly who we are!
             </p>
-          </TextSection>
+          </TextSection2>
           <SpacedHr/>
           {/* Why rent? */}
           <h2>Why rent to us?</h2>
