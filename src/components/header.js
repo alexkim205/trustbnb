@@ -185,7 +185,7 @@ class Header extends Component {
                 <Link to="/contact/">Work With Us</Link>
               </DDNavItem>
               <DDNavItem>
-                <Link to="/inquiry/">Refer & Earn</Link>
+                <Link to="/referral/">Refer & Earn</Link>
               </DDNavItem>
             </Dropdown>
             <StyledNav navbar>
@@ -202,7 +202,7 @@ class Header extends Component {
                 <Link to="/contact">Work With Us</Link>
               </ActionButton>
               <ActionButtonOutline>
-                <Link to="/inquiry">Refer & Earn</Link>
+                <Link to="/referral">Refer & Earn</Link>
               </ActionButtonOutline>
             </StyledNav>
           </StyledNavbar>

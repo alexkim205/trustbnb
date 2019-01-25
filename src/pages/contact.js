@@ -138,6 +138,8 @@ class Contact extends Component {
   }
 
   render() {
+    const email = 'elizabeth@bvrealestatepartners.com'
+
     return (
       <Layout>
         <SEO title="Contact Us"/>
@@ -148,7 +150,8 @@ class Contact extends Component {
         <HalfSpacedHr/>
         <Section>
           <ContactWrapper>
-            <StyledForm>
+            <StyledForm action={`https://formspree.io/${email}`}
+                        method="POST">
               <FormGroup>
                 {/*<Label for="name">Name</Label>*/}
                 <Input type="text" name="fullname" id="name"
@@ -198,7 +201,8 @@ class Contact extends Component {
                          onChange={this.handleChange}/>
                 </InlineFormGroup>
               </FormGroupInline>
-              <Button size="lg" block
+              {/*<input />*/}
+              <Button type="submit" size="lg" block
                       onClick={this.handleSubmit}>Submit</Button>
             </StyledForm>
             <ContactInfo>
