@@ -218,7 +218,7 @@ class Contact extends Component {
                                  size="3x"/>
                 <span>Email us at</span>&nbsp;
                 <span className="payload">
-                    <a href="mailto:email@bvrealestate.partners">email@bvrealestate.partners</a>
+                    <a href={email}>{email}</a>
                   </span>
               </div>
               <div className="contact-item">
