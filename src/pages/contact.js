@@ -6,7 +6,7 @@ import SEO from '../components/seo'
 import { Section } from '../components/section'
 import { HalfSpacedHr } from '../components/spaced-hr'
 
-import { Button, Form, FormGroup, Input } from 'reactstrap'
+import { Button, Label, Form, FormGroup, Input } from 'reactstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faPhoneSquare,
@@ -106,12 +106,24 @@ const ContactInfo = styled.div`
 const FormGroupInline = styled.div`
   display: flex;
   justify-content: space-between;
-`;
+`
 
-const InlineFormGroup = styled(FormGroup)`
+const InlineFormGroup2 = styled(FormGroup)`
   width: 48%;
   display: inline-block;
-`;
+`
+
+const InlineFormGroup3 = styled(FormGroup)`
+  width: 32.5%;
+  display: inline-block;
+`
+
+const stateOptions = ['AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY']
+
+
+const bathOptions = ['1', '1.5', '2', '2.5', '3', '3.5', '4', '4.5', '5+']
+
+const bedOptions = ['1 (Studio)', '2', '3', '4', '5', '6+']
 
 class Contact extends Component {
   constructor(props) {
@@ -122,8 +134,11 @@ class Contact extends Component {
       phone: '',
       message: '',
       address: '',
-      numBed: '',
-      numBath: '',
+      city: '',
+      state: 'NJ',
+      zipcode: '',
+      numBed: bedOptions[0],
+      numBath: bathOptions[0],
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -153,54 +168,88 @@ class Contact extends Component {
             <StyledForm action={`https://formspree.io/${email}`}
                         method="POST">
               <FormGroup>
-                {/*<Label for="name">Name</Label>*/}
+                <Label for="name">Name</Label>
                 <Input type="text" name="fullname" id="name"
-                       placeholder="Name"
+                       placeholder=""
                        value={this.state.name}
                        onChange={this.handleChange}/>
               </FormGroup>
               <FormGroup>
-                {/*<Label for="email"></Label>*/}
+                <Label for="email">Email Address</Label>
                 <Input type="email" name="email" id="email"
-                       placeholder="Email Address"
+                       placeholder=""
                        value={this.state.email}
                        onChange={this.handleChange}/>
               </FormGroup>
               <FormGroup>
-                {/*<Label for="phone">Email</Label>*/}
+                <Label for="phone">Phone Number</Label>
                 <Input type="tel" name="phone" id="phone"
-                       placeholder="Phone Number"
+                       placeholder=""
                        value={this.state.phone}
                        onChange={this.handleChange}/>
               </FormGroup>
               <FormGroup>
-                {/*<Label for="exampleText">Text Area</Label>*/}
-                <Input type="textarea" name="text" id="message"
-                       placeholder="Message"
-                       value={this.state.message}
-                       onChange={this.handleChange}/>
-              </FormGroup>
-              <FormGroup>
-                {/*<Label for="exampleText">Text Area</Label>*/}
-                <Input type="textarea" name="text" id="address"
-                       placeholder="Property Address"
+                <Label for="exampleText">Property Address</Label>
+                <Input type="textarea" name="address" id="address"
+                       placeholder=""
                        value={this.state.address}
                        onChange={this.handleChange}/>
               </FormGroup>
               <FormGroupInline>
-                <InlineFormGroup>
-                  <Input type="number" name="number" id="numBed"
-                         placeholder="Number of Beds"
-                         value={this.state.numBed}
+                <InlineFormGroup3>
+                  <Label for="exampleText">City</Label>
+                  <Input type="text" name="city" id="city"
+                         placeholder=""
+                         value={this.state.city}
                          onChange={this.handleChange}/>
-                </InlineFormGroup>
-                <InlineFormGroup>
-                  <Input type="number" name="number" id="numBath"
-                         placeholder="Number of Bathrooms"
-                         value={this.state.numBath}
+                </InlineFormGroup3>
+                <InlineFormGroup3>
+                  <Label>State</Label>
+                  <Input type="select"
+                         name="state"
+                         id="state"
+                         value={this.state.state}
+                         onChange={this.handleChange}>
+                    {stateOptions.map((v, i) => <option key={i}>{v}</option>)}
+                  </Input>
+                </InlineFormGroup3>
+                <InlineFormGroup3>
+                  <Label for="exampleText">Zip Code</Label>
+                  <Input type="number" name="zipcode" id="zipcode"
+                         placeholder=""
+                         value={this.state.zipcode}
                          onChange={this.handleChange}/>
-                </InlineFormGroup>
+                </InlineFormGroup3>
               </FormGroupInline>
+              <FormGroupInline>
+                <InlineFormGroup2>
+                  <Label>Number of Bedrooms</Label>
+                  <Input type="select"
+                         name="numBed"
+                         id="numBed"
+                         value={this.state.numBed}
+                         onChange={this.handleChange}>
+                    {bedOptions.map((v, i) => <option key={i}>{v}</option>)}
+                  </Input>
+                </InlineFormGroup2>
+                <InlineFormGroup2>
+                  <Label>Number of Bathrooms</Label>
+                  <Input type="select"
+                         name="numBath"
+                         id="numBath"
+                         value={this.state.numBath}
+                         onChange={this.handleChange}>
+                    {bathOptions.map((v, i) => <option key={i}>{v}</option>)}
+                  </Input>
+                </InlineFormGroup2>
+              </FormGroupInline>
+              <FormGroup>
+                <Label for="exampleText">Message</Label>
+                <Input type="textarea" name="message" id="message"
+                       placeholder=""
+                       value={this.state.message}
+                       onChange={this.handleChange}/>
+              </FormGroup>
               {/*<input />*/}
               <Button type="submit" size="lg" block
                       onClick={this.handleSubmit}>Submit</Button>
@@ -210,7 +259,7 @@ class Contact extends Component {
               <div className="contact-item">
                 <FontAwesomeIcon className="phone" icon={faPhoneSquare}
                                  size="3x"/>
-                <span>Call us at</span>&nbsp;
+                <span>Text us at</span>&nbsp;
                 <span className="payload">(123) 456-7890</span>
               </div>
               <div className="contact-item">
@@ -221,14 +270,14 @@ class Contact extends Component {
                     <a href={email}>{email}</a>
                   </span>
               </div>
-              <div className="contact-item">
-                <FontAwesomeIcon className="fb" icon={faFacebookSquare}
-                                 size="3x"/>
-                <span>Visit us on</span>&nbsp;
-                <span className="payload">
-                    <a target="_blank" href="http://facebook.com">Facebook</a>
-                  </span>
-              </div>
+              {/*<div className="contact-item">*/}
+              {/*<FontAwesomeIcon className="fb" icon={faFacebookSquare}*/}
+              {/*size="3x"/>*/}
+              {/*<span>Visit us on</span>&nbsp;*/}
+              {/*<span className="payload">*/}
+              {/*<a target="_blank" href="http://facebook.com">Facebook</a>*/}
+              {/*</span>*/}
+              {/*</div>*/}
             </ContactInfo>
           </ContactWrapper>
         </Section>

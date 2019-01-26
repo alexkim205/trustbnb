@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faAngleDown} from '@fortawesome/free-solid-svg-icons';
+import {faAngleDown, faBars} from '@fortawesome/free-solid-svg-icons';
 
 import colors from '../styles/colors';
 
@@ -63,12 +63,12 @@ const NavItem = styled.div`
 const Dropdown = styled.div`
   display: none;
   position: absolute;
-  top: 75px;
+  top: 66px;
   left: 0;
   width: 100%;
-  background-color: white;
-  padding: 0 20px 12px 20px;
-    z-index: 2;
+  background-color: ${colors.theme.secondary};
+  padding: 10px 20px 15px 20px;
+  z-index: 2;
   
   @media (max-width: 885px) {
     display: ${({isOpen}) => isOpen ? 'flex': 'none'};
@@ -77,8 +77,8 @@ const Dropdown = styled.div`
 `;
 
 const DDNavItem = styled.div`
-  margin: 5px 30px;
-  border-bottom: 2px solid ${colors.border.lighter};
+  margin: 25px 20px 15px 20px;
+  // border-bottom: 2px solid ${colors.border.lighter};
 `;
 
 const StyledNavbarToggler = styled.div`
@@ -169,9 +169,12 @@ class Header extends Component {
             <NavbarBrand href="/">{siteTitle}</NavbarBrand>
             <FlexGrow/>
             <StyledNavbarToggler onClick={this.toggle}>
-              <FontAwesomeIcon icon={faAngleDown}/>
+              <FontAwesomeIcon icon={faBars}/>
             </StyledNavbarToggler>
             <Dropdown isOpen={this.state.isOpen}>
+              <DDNavItem>
+                <Link to="/">Home</Link>
+              </DDNavItem>
               <DDNavItem>
                 <Link to="/listings/">Our Listings</Link>
               </DDNavItem>
