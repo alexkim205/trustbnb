@@ -33,7 +33,7 @@ class IndexPage extends Component {
 
     // images
     const {
-      siteData,
+      siteData, homepage,
       elizabeth, michael, franc, apartment, kitchen,
       rent1, rent2, rent3, rent4, rent5,
     } = this.props.data;
@@ -58,7 +58,7 @@ class IndexPage extends Component {
           </Section>
           <HalfSpacedHr/>
           {/* Header Image */}
-          <FullWidthSection fluidImage={kitchen.childImageSharp.fluid}/>
+          <FullWidthSection fluidImage={homepage.childImageSharp.fluid}/>
           {/* About Us */}
           <TextSection2 color={colors.theme.secondary} header="Mission Statement">
             <p>
@@ -162,6 +162,9 @@ query pageQuery {
   }
   franc: file(relativePath: {eq: "portraits/francisco.jpg"}) {
     ...fluidSmallImage
+  }
+  homepage: file(relativePath: {eq: "misc/homepage.jpg"}) {
+    ...fluidLargeImage
   }
   apartment: file(relativePath: {eq: "homes/apartment.jpg"}) {
     ...fluidLargeImage

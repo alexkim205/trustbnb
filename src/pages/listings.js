@@ -19,9 +19,9 @@ class Listings extends Component {
   render() {
     const {
       apartment,
-      home1, home2, home3, home4, home5, home6,
+      home1, home2, home3, home4, home5, home6, home7,
     } = this.props.data
-
+    console.log(this.props.data)
     return (
       <Layout>
         <SEO title="Listings"/>
@@ -62,6 +62,10 @@ class Listings extends Component {
                                superhost={true}
                                rating={5}
                                underText="Really great value with a bright, spacious layout. Loved that there were two bathrooms, linens and towels provided, and TVs in most rooms. Location is convenient to restaurants and the subway and airport. Amazing value for the money! - Rachel"/>
+          <ListingsGridSection fluidImage={home7.childImageSharp.fluid}
+                               superhost={true}
+                               rating={5}
+                               underText="Really really nice and easy to contact. Super clean, private and welcoming. It was everything it said in the description. No regrets, wouldn’t hesitate to book again and you shouldn’t either. - Marcela"/>
 
         </Grid>
       </Layout>
@@ -89,6 +93,9 @@ query listingsQuery {
     ...fluidSmallImage
   }
   home6: file(relativePath: {eq: "homes/home6.jpg"}) {
+    ...fluidSmallImage
+  }
+  home7: file(relativePath: {eq: "homes/home7.jpg"}) {
     ...fluidSmallImage
   }
   apartment: file(relativePath: {eq: "homes/apartment.jpg"}) {
