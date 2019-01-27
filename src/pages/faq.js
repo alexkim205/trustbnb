@@ -18,43 +18,36 @@ import { Collapse, CardBody, Card, CardHeader } from 'reactstrap'
 
 const faqs = [
   {
-    q: 'What would disqualify a property from your program?',
-    a: 'Two primary items: location and deferred maintenance. We pride ourselves on providing quality housing in specific, centrally-located geographic areas.',
-  },
-  {
-    q: 'How do I know I get paid on time each month?',
-    a: 'We maintain a reserve fund of 3 months rent for every property to make certain you are secure. Note that as of this writing, we have never had to tap into the reserve fund.',
+    q: 'How do I receive the monthly rental payment?',
+    a: 'We maintain a minimum reserve fund of 3 months rent to guarantee you will always be paid on time. We will send you a bank statement of the reserve account at your request.',
   },
   {
     q: 'What happens if an occupant damages my property',
-    a: 'GoHomeAway is 100% responsible for repairing any occupant-caused damage, coordinating all repairs and maintenance, paying utilities AND rent even if the property is unoccupied.',
+    a: 'TrustBNB is 100% responsible for repairing any occupant-caused damage, coordinating all repairs and maintenance, paying utilities AND rent even if the property is unoccupied.',
   },
   {
-    q: 'What happens if GoHomeAway breaches any terms of the agreement?',
-    a: 'If we default on any terms of our agreement, you have the right to end the agreement and take over as landlord.',
+    q: 'What happens if TrustBNB breaches any terms of the agreement?',
+    a: 'If we default on any terms of our agreement, you have the right to end the agreement. We will return the property in excellent condition.',
   },
   {
     q: 'What happens if I breach any terms of the agreement?',
-    a: 'If you default on any terms of our agreement, we have the right to end the agreement and let you take over as landlord. Failing to promptly address an issue at the property that negatively impacts the guest’s quality of life (heating, A/C, plumbing) would be considered a default on the terms of our agreement. Also, failing to disclose a problem with the property, like a pest control issue beforehand would be considered a default as well.',
+    a: 'If you default on any terms of our agreement, we have the right to end the agreement. Failing to promptly address a major issues at the property that negatively impacts the guest’s quality of life (heating, A/C, plumbing, leaking) would be considered a default on the terms of our agreement. ',
   },
   {
-    q: 'How are repair and maintenance handled?',
-    a: 'If the cost of the repair is less than the monthly rent GoHomeAway pays you, GoHomeAway will pay for it upfront and deduct it from the next month’s rent. If the cost of the repair is above the monthly rent GoHomeAway pays you, you are responsible for paying for the repair upfront. All invoices are submitted to you and GoHomeAway does not charge any premiums over and above the actual costs incurred.\n' +
-      '\n' +
-      'We require that all repairs be handled by a highly trained professional to ensure that they are completed to the highest level of workmanship possible. If there are any repairs that you’d like to make, please do so BEFORE you sign an agreement with GoHomeAway.',
+    q: 'What happens if I breach any terms of the agreement?',
+    a: 'If you default on any terms of our agreement, we have the right to end the agreement. Failing to promptly address a major issues at the property that negatively impacts the guest’s quality of life (heating, A/C, plumbing, leaking) would be considered a default on the terms of our agreement.',
   },
   {
     q: 'Do I still get to take the depreciation tax deduction on the property?',
-    a: 'Absolutely! You are still the owner. No depreciation, voting rights or equitable interest are being transferred. This is just a long term guaranteed lease with the right to sublet, nothing more, nothing less.',
+    a: 'Absolutely! Everything remains the same as the property owner. This is just a long term guaranteed lease.',
   },
   {
     q: 'How do I get started?',
-    a: 'Here is the order of events:\n' +
-      'Complete the property qualification form on our home page\n' +
-      'If your property qualifies, we will schedule an appointment to meet at the property\n' +
-      'Tour property and discuss the terms of the lease agreement\n' +
-      'We sign the lease and Occupied furnishes the property\n' +
-      'You sit back, relax and collect your check!',
+    a: 'Please complete the Work With Us form on the home page. If your property qualifies, we will schedule a property tour and discuss the terms of the lease agreement. From now on, you can sit back, relax and collect your rent without any more hassle of landlording.',
+  },
+  {
+    q: 'What would disqualify a property from our program?',
+    a: 'Location and deferred maintenance. We pride ourselves on providing quality housing in locations close to public transportation.',
   },
 ]
 

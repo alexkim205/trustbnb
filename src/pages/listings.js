@@ -18,24 +18,24 @@ class Listings extends Component {
 
   render() {
     const {
+      siteData,
       apartment,
       home1, home2, home3, home4, home5, home6, home7,
     } = this.props.data
     console.log(this.props.data)
     return (
       <Layout>
-        <SEO title="Listings"/>
+        <SEO title="Rental Partners"/>
         <Section>
-          <h1>Recent Rentals</h1>
-          <h6>These property owners are currently earning substantially higher
-            rental income with BV Rental Networks.</h6>
+          <h1>Rental Partners</h1>
+          <h6>These property owners are currently earning guaranteed monthly rental income with {siteData.siteMetadata.title}</h6>
         </Section>
         <HalfSpacedHr/>
         {/* Header Image */}
         <FullWidthSection fluidImage={apartment.childImageSharp.fluid}/>
         <SpacedHr/>
         {/* Why rent? */}
-        <h2>Our Listings</h2>
+        <h2>Selected Partners</h2>
         {/*<FullWidthSection fluidImage={work.childImageSharp.fluid}/>*/}
         <Grid>
           <ListingsGridSection fluidImage={home1.childImageSharp.fluid}
@@ -77,6 +77,12 @@ export default Listings
 
 export const listingsQuery = graphql`
 query listingsQuery {
+  siteData: site {
+    siteMetadata {
+      title
+      officialTitle
+    }
+  }
   home1: file(relativePath: {eq: "homes/home1.jpg"}) {
     ...fluidSmallImage
   }

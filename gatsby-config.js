@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Trustbnb`,
-    officialTitle: `Trustbnb, Co.`,
-    description: `A website to showcase BV Real Estate Partners`,
+    title: `TrustBNB`,
+    officialTitle: `TrustBNB, Co.`,
+    description: `A website to showcase TrustBNB`,
     author: `Alex Kim <agk2144@columbia.edu>`,
   },
   plugins: [

@@ -45,10 +45,22 @@ const StyledNavbar = styled.div`
     }
   }
 `
+
+const NavbarBrandLink = styled(Link)`
+    // &:after {
+    //   display: table-cell;
+    // }
+`
 const StyledNavBarBrand = styled(NavbarBrand)`
     width: 29px;
     margin-right: 9px !important;
     overflow: hidden;
+    // padding-top: px;
+`
+const StyledNavbarBrandName = styled(NavbarBrand)`
+  a:hover {
+    text-decoration: none;
+  }
 `
 
 const FlexGrow = styled.div`
@@ -188,11 +200,15 @@ query logoQuery {
             <Fragment>
               <StyledNavbar color="#fff" light expand="md">
                 <StyledNavBarBrand>
-                  <Img fluid={data.logo.childImageSharp.fluid}/>
+                  <Link to="/">
+                    <Img fluid={data.logo.childImageSharp.fluid}/>
+                  </Link>
                 </StyledNavBarBrand>
-                <NavbarBrand>
-                  {siteTitle}
-                </NavbarBrand>
+                <StyledNavbarBrandName>
+                  <Link to="/">
+                    {siteTitle}
+                  </Link>
+                </StyledNavbarBrandName>
                 {/*<NavbarBrand href="/">{siteTitle}</NavbarBrand>*/}
                 <FlexGrow/>
                 <StyledNavbarToggler onClick={this.toggle}>
@@ -212,7 +228,7 @@ query logoQuery {
                     <Link to="/faq/">FAQ</Link>
                   </DDNavItem>
                   <DDNavItem>
-                    <Link to="/contact/">Work With Us</Link>
+                    <Link to="/contact/">Contact Us</Link>
                   </DDNavItem>
                   {/*<DDNavItem>*/}
                   {/*<Link to="/referral/">Refer & Earn</Link>*/}
@@ -220,7 +236,10 @@ query logoQuery {
                 </Dropdown>
                 <StyledNav navbar>
                   <NavItem>
-                    <Link to="/listings/">Our Listings</Link>
+                    <Link to="/">Home</Link>
+                  </NavItem>
+                  <NavItem>
+                    <Link to="/listings/">Rental Partners</Link>
                   </NavItem>
                   {/*<NavItem>*/}
                   {/*<Link to="/contact/">Contact Us</Link>*/}
@@ -229,7 +248,7 @@ query logoQuery {
                     <Link to="/faq">FAQ</Link>
                   </NavItem>
                   <ActionButton>
-                    <Link to="/contact">Work With Us</Link>
+                    <Link to="/contact">Contact Us</Link>
                   </ActionButton>
                   {/*<ActionButtonOutline>*/}
                   {/*<Link to="/referral">Refer & Earn</Link>*/}

@@ -123,7 +123,7 @@ const stateOptions = ['AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC'
 
 const bathOptions = ['1', '1.5', '2', '2.5', '3', '3.5', '4', '4.5', '5+']
 
-const bedOptions = ['1 (Studio)', '2', '3', '4', '5', '6+']
+const bedOptions = ['0 (Studio)', '1', '2', '3', '4', '5', '6+']
 
 class Contact extends Component {
   constructor(props) {
