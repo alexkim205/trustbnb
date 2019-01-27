@@ -1,16 +1,17 @@
-import React, {Component, Fragment} from 'react';
-import {Link} from 'gatsby';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react'
+import { Link, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faAngleDown, faBars} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
-import colors from '../styles/colors';
+import colors from '../styles/colors'
 
 import {
   NavbarBrand,
-} from 'reactstrap';
+} from 'reactstrap'
 
 const StyledNavbar = styled.div`
   margin: 0px auto;
@@ -43,11 +44,16 @@ const StyledNavbar = styled.div`
       display: none;
     }
   }
-`;
+`
+const StyledNavBarBrand = styled(NavbarBrand)`
+    width: 29px;
+    margin-right: 9px !important;
+    overflow: hidden;
+`
 
 const FlexGrow = styled.div`
   flex: 1;
-`;
+`
 const NavItem = styled.div`
   margin: auto 10px;
   a {
@@ -58,7 +64,7 @@ const NavItem = styled.div`
   @media (max-width: 885px) {
     display: none;
   }
-`;
+`
 
 const Dropdown = styled.div`
   display: none;
@@ -71,15 +77,15 @@ const Dropdown = styled.div`
   z-index: 2;
   
   @media (max-width: 885px) {
-    display: ${({isOpen}) => isOpen ? 'flex': 'none'};
+    display: ${({ isOpen }) => isOpen ? 'flex' : 'none'};
     flex-direction: column;
   }
-`;
+`
 
 const DDNavItem = styled.div`
   margin: 25px 20px 15px 20px;
   // border-bottom: 2px solid ${colors.border.lighter};
-`;
+`
 
 const StyledNavbarToggler = styled.div`
   display: none;
@@ -90,12 +96,12 @@ const StyledNavbarToggler = styled.div`
     display: flex !important;
     align-items: center;
   }
-`;
+`
 
 const StyledNav = styled.div`
   display: flex;
   
-`;
+`
 
 const ActionButton = styled.div`
   background-color: ${colors.theme.main};
@@ -126,7 +132,7 @@ const ActionButton = styled.div`
   @media (max-width: 630px) {
     display: none;
   }
-`;
+`
 
 const ActionButtonOutline = styled(ActionButton)`
   border: 2px solid ${colors.theme.accent};
@@ -141,86 +147,111 @@ const ActionButtonOutline = styled(ActionButton)`
   // @media (max-width: 630px) {
   //   display: none;
   // }
-`;
+`
 
 class Header extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this)
     this.state = {
       isOpen: false,
-    };
+    }
   }
 
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
-    });
+    })
   }
 
   render() {
-    const {siteTitle} = this.props;
-    console.log(this.state.isOpen);
+    const { siteTitle } = this.props
+    console.log(this.state.isOpen)
 
     return (
-        <Fragment>
-          <StyledNavbar color="#fff" light expand="md">
-            <NavbarBrand href="/">{siteTitle}</NavbarBrand>
-            <FlexGrow/>
-            <StyledNavbarToggler onClick={this.toggle}>
-              <FontAwesomeIcon icon={faBars}/>
-            </StyledNavbarToggler>
-            <Dropdown isOpen={this.state.isOpen}>
-              <DDNavItem>
-                <Link to="/">Home</Link>
-              </DDNavItem>
-              <DDNavItem>
-                <Link to="/listings/">Our Listings</Link>
-              </DDNavItem>
-              {/*<DDNavItem>*/}
-                {/*<Link to="/contact/">Contact Us</Link>*/}
-              {/*</DDNavItem>*/}
-              <DDNavItem>
-                <Link to="/faq/">FAQ</Link>
-              </DDNavItem>
-              <DDNavItem>
-                <Link to="/contact/">Work With Us</Link>
-              </DDNavItem>
-              {/*<DDNavItem>*/}
-                {/*<Link to="/referral/">Refer & Earn</Link>*/}
-              {/*</DDNavItem>*/}
-            </Dropdown>
-            <StyledNav navbar>
-              <NavItem>
-                <Link to="/listings/">Our Listings</Link>
-              </NavItem>
-              {/*<NavItem>*/}
-                {/*<Link to="/contact/">Contact Us</Link>*/}
-              {/*</NavItem>*/}
-              <NavItem>
-                <Link to="/faq">FAQ</Link>
-              </NavItem>
-              <ActionButton>
-                <Link to="/contact">Work With Us</Link>
-              </ActionButton>
-              {/*<ActionButtonOutline>*/}
-                {/*<Link to="/referral">Refer & Earn</Link>*/}
-              {/*</ActionButtonOutline>*/}
-            </StyledNav>
-          </StyledNavbar>
+      <StaticQuery
+        query={graphql`
+query logoQuery {
+  logo: file(relativePath: {eq: "misc/logo-strip.jpg"}) {
+    childImageSharp {
+      fluid(maxWidth: 500) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+}
+    `}
+        render={data => {
+          console.log(data)
+          return (
+            <Fragment>
+              <StyledNavbar color="#fff" light expand="md">
+                <StyledNavBarBrand>
+                  <Img fluid={data.logo.childImageSharp.fluid}/>
+                </StyledNavBarBrand>
+                <NavbarBrand>
+                  {siteTitle}
+                </NavbarBrand>
+                {/*<NavbarBrand href="/">{siteTitle}</NavbarBrand>*/}
+                <FlexGrow/>
+                <StyledNavbarToggler onClick={this.toggle}>
+                  <FontAwesomeIcon icon={faBars}/>
+                </StyledNavbarToggler>
+                <Dropdown isOpen={this.state.isOpen}>
+                  <DDNavItem>
+                    <Link to="/">Home</Link>
+                  </DDNavItem>
+                  <DDNavItem>
+                    <Link to="/listings/">Our Listings</Link>
+                  </DDNavItem>
+                  {/*<DDNavItem>*/}
+                  {/*<Link to="/contact/">Contact Us</Link>*/}
+                  {/*</DDNavItem>*/}
+                  <DDNavItem>
+                    <Link to="/faq/">FAQ</Link>
+                  </DDNavItem>
+                  <DDNavItem>
+                    <Link to="/contact/">Work With Us</Link>
+                  </DDNavItem>
+                  {/*<DDNavItem>*/}
+                  {/*<Link to="/referral/">Refer & Earn</Link>*/}
+                  {/*</DDNavItem>*/}
+                </Dropdown>
+                <StyledNav navbar>
+                  <NavItem>
+                    <Link to="/listings/">Our Listings</Link>
+                  </NavItem>
+                  {/*<NavItem>*/}
+                  {/*<Link to="/contact/">Contact Us</Link>*/}
+                  {/*</NavItem>*/}
+                  <NavItem>
+                    <Link to="/faq">FAQ</Link>
+                  </NavItem>
+                  <ActionButton>
+                    <Link to="/contact">Work With Us</Link>
+                  </ActionButton>
+                  {/*<ActionButtonOutline>*/}
+                  {/*<Link to="/referral">Refer & Earn</Link>*/}
+                  {/*</ActionButtonOutline>*/}
+                </StyledNav>
+              </StyledNavbar>
 
-        </Fragment>
-    );
+            </Fragment>
+          )
+        }}
+      />
+
+    )
   }
 }
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-};
+}
 
 Header.defaultProps = {
   siteTitle: ``,
-};
+}
 
-export default Header;
+export default Header

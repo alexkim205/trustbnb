@@ -53,8 +53,7 @@ class IndexPage extends Component {
           {/* Title */}
           <Section>
             <h1>{siteData.siteMetadata.title}</h1>
-            <h6>Mission statement goes here. It should be about as long as these
-              two sentences.</h6>
+            <h6>Guiding principle: ”The glue that holds all relationships together is trust, and trust is based on integrity.”</h6>
           </Section>
           <HalfSpacedHr/>
           {/* Header Image */}
