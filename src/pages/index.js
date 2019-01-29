@@ -54,8 +54,8 @@ class IndexPage extends Component {
         {/* Title */}
         <Section>
           <h1>{siteData.siteMetadata.title}</h1>
-          <h6>Guiding principle: ”The glue that holds all relationships together is trust, and trust is based on
-            integrity.”</h6>
+          {/*<h6>Guiding principle: ”The glue that holds all relationships together is trust, and trust is based on*/}
+            {/*integrity.”</h6>*/}
         </Section>
         <HalfSpacedHr/>
         {/* Header Image */}
@@ -65,7 +65,6 @@ class IndexPage extends Component {
           <p>
               <span className="highlight">{siteData.siteMetadata.title}&nbsp;
                 is committed to helping property owners maximize returns while minimizing their risk.</span>
-
           </p>
           <p>
             We are looking to partner with the best property owners to deliver a great experience for visitors to New
@@ -75,8 +74,13 @@ class IndexPage extends Component {
             We are interested in leasing your property to expand our Short Term Rental business.
           </p>
           <p>
-            We are back by the highest credit rating and a $1,000,000 insurance policy.
+            We are backed by the highest credit rating and a $1,000,000 insurance policy.
           </p>
+          <br/>
+          <blockquote>
+            Our guiding principle: ”The glue that holds all relationships together is trust, and trust is based on
+            integrity.”
+          </blockquote>
         </TextSection2>
         <SpacedHr/>
         {/* Why rent? */}

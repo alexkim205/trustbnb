@@ -43,7 +43,7 @@ const faqs = [
   },
   {
     q: 'How do I get started?',
-    a: 'Please complete the Work With Us form on the home page. If your property qualifies, we will schedule a property tour and discuss the terms of the lease agreement. From now on, you can sit back, relax and collect your rent without any more hassle of landlording.',
+    a: 'Please complete the Contact Us form on the home page. If your property qualifies, we will schedule a property tour and discuss the terms of the lease agreement. From now on, you can sit back, relax and collect your rent without any more hassle of landlording.',
   },
   {
     q: 'What would disqualify a property from our program?',

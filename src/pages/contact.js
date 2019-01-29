@@ -260,7 +260,7 @@ class Contact extends Component {
                 <FontAwesomeIcon className="phone" icon={faPhoneSquare}
                                  size="3x"/>
                 <span>Text us at</span>&nbsp;
-                <span className="payload">(123) 456-7890</span>
+                <span className="payload">+1 (858)859-2807</span>
               </div>
               <div className="contact-item">
                 <FontAwesomeIcon className="email" icon={faEnvelopeSquare}

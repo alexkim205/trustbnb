@@ -128,18 +128,17 @@ class Bio extends Component {
             <BioWrapper key={i}>
               <div>
                 <StyledImg fluid={fluidImg}/>
-                <div className="content">
-                  {/*<h3>{fname}</h3>*/}
-                  <small>{position}&nbsp;&nbsp;&nbsp;
-                    {linkedin && (
-                      <a href={linkedin} target="_blank">
+                <a href={linkedin} target="_blank">
+                  <div className="content">
+                    {/*<h3>{fname}</h3>*/}
+                    <small>{position}&nbsp;&nbsp;&nbsp;
+                      {linkedin &&
                         <FontAwesomeIcon icon={faLinkedin} size="lg"/>
-                      </a>
-                    )}
-                  </small>
-
-                  <p>{biography}</p>
-                </div>
+                      }
+                    </small>
+                    <p>{biography}</p>
+                  </div>
+                </a>
               </div>
               <div className="name">
                 <h3>{fname}</h3>

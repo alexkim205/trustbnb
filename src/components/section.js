@@ -46,7 +46,7 @@ const StyledFullSection = styled.div`
     h2{color: white !important;}
     span{color: white !important;}
     p{color: white !important;}
-    *{color: white !important;}
+    // *{color: white !important;}
     // border-bottom: 2px solid ${color};
     // border-left: 2px solid ${color};
     // border-right: 2px solid ${color};
