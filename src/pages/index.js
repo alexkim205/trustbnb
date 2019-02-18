@@ -52,11 +52,11 @@ class IndexPage extends Component {
       <Layout>
         <SEO title="Home" keywords={[`real estate`, `housing`, `bv`]}/>
         {/* Title */}
-        <Section>
+        {/* <Section>
           <h1>{siteData.siteMetadata.title}</h1>
-          {/*<h6>Guiding principle: ”The glue that holds all relationships together is trust, and trust is based on*/}
-            {/*integrity.”</h6>*/}
-        </Section>
+          <h6>Guiding principle: ”The glue that holds all relationships together is trust, and trust is based on
+            integrity.”</h6>
+        </Section> */}
         <HalfSpacedHr/>
         {/* Header Image */}
         <FullWidthSection fluidImage={homepage.childImageSharp.fluid}/>

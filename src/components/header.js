@@ -52,10 +52,14 @@ const NavbarBrandLink = styled(Link)`
     // }
 `
 const StyledNavBarBrand = styled(NavbarBrand)`
-    width: 29px;
+    width: 100px;
     margin-right: 9px !important;
     overflow: hidden;
+    transition: all 0.2s;
     // padding-top: px;
+    &.smaller {
+      width: 50px;
+    }
 `
 const StyledNavbarBrandName = styled(NavbarBrand)`
   a:hover {
@@ -171,6 +175,21 @@ class Header extends Component {
     }
   }
 
+  componentDidMount() {
+    window.addEventListener("scroll", this.resizeHeaderOnScroll);
+  }
+  resizeHeaderOnScroll() {
+    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      shrinkOn = 100,
+      headerEl = document.getElementById("header-brand");
+
+    if (distanceY > shrinkOn) {
+      headerEl.classList.add("smaller");
+    } else {
+      headerEl.classList.remove("smaller");
+    }
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen,
@@ -185,7 +204,7 @@ class Header extends Component {
       <StaticQuery
         query={graphql`
 query logoQuery {
-  logo: file(relativePath: {eq: "misc/logo-strip.jpg"}) {
+  logo: file(relativePath: {eq: "misc/new-logo.jpg"}) {
     childImageSharp {
       fluid(maxWidth: 500) {
         ...GatsbyImageSharpFluid
@@ -199,16 +218,16 @@ query logoQuery {
           return (
             <Fragment>
               <StyledNavbar color="#fff" light expand="md">
-                <StyledNavBarBrand>
+                <StyledNavBarBrand id="header-brand">
                   <Link to="/">
                     <Img fluid={data.logo.childImageSharp.fluid}/>
                   </Link>
                 </StyledNavBarBrand>
-                <StyledNavbarBrandName>
+                {/* <StyledNavbarBrandName>
                   <Link to="/">
                     {siteTitle}
                   </Link>
-                </StyledNavbarBrandName>
+                </StyledNavbarBrandName> */}
                 {/*<NavbarBrand href="/">{siteTitle}</NavbarBrand>*/}
                 <FlexGrow/>
                 <StyledNavbarToggler onClick={this.toggle}>

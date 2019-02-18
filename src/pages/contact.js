@@ -153,7 +153,7 @@ class Contact extends Component {
   }
 
   render() {
-    const email = 'elizabeth@bvrealestatepartners.com'
+    const email = 'info@bvrealestatepartners.com'
 
     return (
       <Layout>
