@@ -20,7 +20,7 @@ class Listings extends Component {
     const {
       siteData,
       apartment,
-      home1, home2, home3, home4, home5, home6, home7,
+      home1, home2, home3, home4, home5, home6, home7, home8,
     } = this.props.data
     console.log(this.props.data)
     return (
@@ -66,7 +66,10 @@ class Listings extends Component {
                                superhost={true}
                                rating={5}
                                underText="Really really nice and easy to contact. Super clean, private and welcoming. It was everything it said in the description. No regrets, wouldn’t hesitate to book again and you shouldn’t either. - Marcela"/>
-
+          <ListingsGridSection fluidImage={home8.childImageSharp.fluid}
+                               superhost={true}
+                               rating={5}
+                               underText="This is one of the best airbnbs I’ve stayed in. The house is beautiful and super clean. Sophie is an excellent, accommodating and approachable host who is very welcoming and helpful. -Sanya"/>
         </Grid>
       </Layout>
     )
@@ -102,6 +105,9 @@ query listingsQuery {
     ...fluidSmallImage
   }
   home7: file(relativePath: {eq: "homes/home7.jpg"}) {
+    ...fluidSmallImage
+  }
+  home8: file(relativePath: {eq: "homes/home8.jpg"}) {
     ...fluidSmallImage
   }
   apartment: file(relativePath: {eq: "homes/apartment.jpg"}) {
