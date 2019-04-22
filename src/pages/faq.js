@@ -34,10 +34,6 @@ const faqs = [
     a: 'If you default on any terms of our agreement, we have the right to end the agreement. Failing to promptly address a major issues at the property that negatively impacts the guest’s quality of life (heating, A/C, plumbing, leaking) would be considered a default on the terms of our agreement. ',
   },
   {
-    q: 'What happens if I breach any terms of the agreement?',
-    a: 'If you default on any terms of our agreement, we have the right to end the agreement. Failing to promptly address a major issues at the property that negatively impacts the guest’s quality of life (heating, A/C, plumbing, leaking) would be considered a default on the terms of our agreement.',
-  },
-  {
     q: 'Do I still get to take the depreciation tax deduction on the property?',
     a: 'Absolutely! Everything remains the same as the property owner. This is just a long term guaranteed lease.',
   },
