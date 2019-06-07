@@ -35,7 +35,7 @@ class IndexPage extends Component {
     // images
     const {
       siteData, homepage,
-      elizabeth, michael, franc, apartment, kitchen,
+      elizabeth, michael, franc, amanda, apartment, kitchen,
       rent1, rent2, rent3, rent4, rent5,
     } = this.props.data
 
@@ -43,6 +43,7 @@ class IndexPage extends Component {
       elizabeth.childImageSharp.fluid,
       michael.childImageSharp.fluid,
       franc.childImageSharp.fluid,
+      amanda.childImageSharp.fluid
     ]
     // bios
     const { bios } = this.props.data
@@ -167,6 +168,9 @@ query pageQuery {
     ...fluidSmallImage
   }
   franc: file(relativePath: {eq: "portraits/francisco.jpg"}) {
+    ...fluidSmallImage
+  }
+  amanda: file(relativePath: {eq: "portraits/amanda.jpg"}) {
     ...fluidSmallImage
   }
   homepage: file(relativePath: {eq: "misc/homepage.jpg"}) {
