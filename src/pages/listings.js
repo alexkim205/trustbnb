@@ -28,6 +28,7 @@ class Listings extends Component {
       home7,
       home8,
       home9,
+      home10,
     } = this.props.data
     console.log(this.props.data)
     return (
@@ -102,6 +103,12 @@ class Listings extends Component {
             rating={5}
             underText=""
           />
+          <ListingsGridSection
+            fluidImage={home10.childImageSharp.fluid}
+            superhost={true}
+            rating={5}
+            underText="I recommend everyone who is traveling to NYC to go there! 🤗 The place is really wonderful. Whenever i will be coming to New York i hope i will find it available so that i can book it. The building is wonderful i love the rooftop, the cinema room (next level Netflix and Chill) and the lounge. 4 mins walk to get to Union Square and it’s near everything and everywhere. It’s not expensive at all for the location and the Luxury you will get."
+          />
         </Grid>
       </Layout>
     )
@@ -143,6 +150,9 @@ export const listingsQuery = graphql`
       ...fluidSmallImage
     }
     home9: file(relativePath: { eq: "homes/home9.jpg" }) {
+      ...fluidSmallImage
+    }
+    home10: file(relativePath: { eq: "homes/home10.jpg" }) {
       ...fluidSmallImage
     }
     apartment: file(relativePath: { eq: "homes/apartment.jpg" }) {
