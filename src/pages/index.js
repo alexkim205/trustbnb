@@ -42,8 +42,8 @@ class IndexPage extends Component {
     const teamImgs = [
       elizabeth.childImageSharp.fluid,
       michael.childImageSharp.fluid,
-      franc.childImageSharp.fluid,
-      amanda.childImageSharp.fluid
+      amanda.childImageSharp.fluid,
+      franc.childImageSharp.fluid
     ]
     // bios
     const { bios } = this.props.data
@@ -167,10 +167,10 @@ query pageQuery {
   michael: file(relativePath: {eq: "portraits/michael.jpg"}) {
     ...fluidSmallImage
   }
-  franc: file(relativePath: {eq: "portraits/francisco.jpg"}) {
+  amanda: file(relativePath: {eq: "portraits/amanda.jpg"}) {
     ...fluidSmallImage
   }
-  amanda: file(relativePath: {eq: "portraits/amanda.jpg"}) {
+  franc: file(relativePath: {eq: "portraits/francisco.jpg"}) {
     ...fluidSmallImage
   }
   homepage: file(relativePath: {eq: "misc/homepage.jpg"}) {
