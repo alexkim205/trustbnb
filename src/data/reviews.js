@@ -8,7 +8,7 @@ export const reviews = [
   "Really really nice and easy to contact. Super clean, private and welcoming. It was everything it said in the description. No regrets, wouldn’t hesitate to book again and you shouldn’t either. - Marcela",
   "This is one of the best airbnbs I’ve stayed in. The house is beautiful and super clean. Sophie is an excellent, accommodating and approachable host who is very welcoming and helpful. -Sanya",
   "Great stay! -Johannes & Lara",
-  "I recommend everyone who is traveling to NYC to go there! 🤗 The place is really wonderful. Whenever i will be coming to New York i hope i will find it available so that i can book it. The building is wonderful i love the rooftop, the cinema room (next level Netflix and Chill) and the lounge. 4 mins walk to get to Union Square and it’s near everything and everywhere. It’s not expensive at all for the location and the Luxury you will get.",
+  "I recommend everyone who is traveling to NYC to go there! 🤗 The place is really wonderful. Whenever i will be coming to New York i hope i will find it available so that i can book it. The building is wonderful i love the rooftop, the cinema room (next level Netflix and Chill) and the lounge. It’s near everything and everywhere. It’s not expensive at all for the location and the Luxury you will get.",
   "Onboarding now. Ready in late September.",
   "Onboarding now. Ready on September 15th.",
   "Onboarding now. Ready on September 15th.",
