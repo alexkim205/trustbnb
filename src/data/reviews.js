@@ -9,8 +9,8 @@ export const reviews = [
   "This is one of the best airbnbs I’ve stayed in. The house is beautiful and super clean. Sophie is an excellent, accommodating and approachable host who is very welcoming and helpful. -Sanya",
   "Great stay! -Johannes & Lara",
   "I recommend everyone who is traveling to NYC to go there! 🤗 The place is really wonderful. Whenever i will be coming to New York i hope i will find it available so that i can book it. The building is wonderful i love the rooftop, the cinema room (next level Netflix and Chill) and the lounge. It’s near everything and everywhere. It’s not expensive at all for the location and the Luxury you will get.",
-  "Onboarding now. Ready in late September.",
-  "Onboarding now. Ready on September 15th.",
-  "Onboarding now. Ready on September 15th.",
-  "Onboarding now. Ready on September 15th."
+  "We spent five nights at TrustBNB. The apartment is very spacious and clean. The location is perfect, at a walking distance from a lot of cute coffee shops and stores. Would definitely stay there again! - Sara",
+  "I enjoyed my stay at TrustBNB. The home was beautiful, very spacious and clean. Great location not far from attractions and public transportation is very close by. I highly recommend others to stay here. Thank you for the good hospitality. - Bryonna",
+  "This is a beautiful place!! Great value for the price!! - David",
+  "The apartment is spacious and tidy, with high ceilings and lots of room to move around. Location couldn't be better with super easy access to Union Square with everything that has to offer. - Debbie"
 ]
